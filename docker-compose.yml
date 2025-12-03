@@ -12,6 +12,10 @@ services:
       - db
     networks:
       - symfony-net
+    environment:
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
 
   db:
     image: mysql:8.0
